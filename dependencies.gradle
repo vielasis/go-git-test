@@ -1,0 +1,54 @@
+ext.versions = [
+        minSdkVersion : 21,
+        targetSdkVersion : 28,
+        buildSdkVersion : 29,
+        zendeskVersion : '1.11.0.1',
+        zopimChatVersion : '1.4.8',
+        gsonVersion : '2.8.5',
+        junitVersion: '4.12',
+        koinVersion : '2.0.1',
+        roomVersion : '2.2.5',
+        pagingKtxVersion : '2.1.0',
+        lithoVersion : '0.34.0',
+        jumioVersion : '3.6.2',
+
+//    Update filename of whats_new if we have a new popup image to show in the new build
+//    Short term solution until MBE supports this feature
+        buildVersionCode : 576
+]
+
+// For unit tests
+ext.testLibs = [
+    junit : "junit:junit:$versions.junitVersion",
+    mockito : "org.mockito:mockito-core:2.18.0",
+    mockitoInline : "org.mockito:mockito-inline:2.18.0",
+    androidArchCore : "androidx.arch.core:core-testing:2.0.0",
+    // Because android json comes with Android.jar, we need to include this
+    json: "org.json:json:20171018"
+]
+
+// For instrumented tests
+ext.androidTestLibs = [
+    runner : 'androidx.test:runner:1.1.0-alpha4',
+    rules : 'androidx.test:rules:1.1.0-alpha4',
+    espressoCore : 'androidx.test.espresso:espresso-core:3.1.0-alpha4',
+    espressoIntent : 'androidx.test.espresso:espresso-intents:3.1.0-alpha4',
+    junit : "junit:junit:$versions.junitVersion"
+]
+
+ext.koin = [
+    android : "org.koin:koin-android:$versions.koinVersion",
+    scope : "org.koin:koin-androidx-scope:$versions.koinVersion",
+    viewModel : "org.koin:koin-androidx-viewmodel:$versions.koinVersion",
+    java : "org.koin:koin-java:$versions.koinVersion",
+    test: "org.koin:koin-test:$versions.koinVersion"
+]
+
+// Map for the version code that gives each ABI a value.
+ext.abiCodes = [
+    'armeabi-v7a':1,
+    'armeabi':2,
+    'arm64-v8a':3,
+    'x86':4,
+    'x86_64':5
+]

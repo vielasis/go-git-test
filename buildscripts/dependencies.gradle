@@ -14,7 +14,7 @@ ext.versions = [
 
 //    Update filename of whats_new if we have a new popup image to show in the new build
 //    Short term solution until MBE supports this feature
-        buildVersionCode : 576
+        buildVersionCode : 577
 ]
 
 // For unit tests
